@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Santa GRAMPS | Engagement Agreement &amp; Inquiries</title>
+  <meta name="description" content="Request an appearance by Santa GRAMPS. Download the engagement agreement or complete the fillable form online.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8E%85%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .page-hero {
+      background: linear-gradient(160deg, var(--cream) 0%, var(--cream-dark) 100%);
+      padding: 3.5rem 0 3rem;
+      text-align: center;
+      border-bottom: 1px solid var(--gold-light);
+    }
+    .page-hero h1 { color: var(--red); margin-bottom: 0.75rem; }
+    .page-hero p {
+      color: var(--text-muted);
+      font-size: 1.15rem;
+      max-width: 580px;
+      margin: 0 auto;
+    }
+
+    .book-intro {
+      padding: var(--space-lg) 0 var(--space-md);
+      text-align: center;
+    }
+    .book-intro p {
+      max-width: 640px;
+      margin: 0 auto 1.5rem;
+      color: var(--text);
+      font-size: 1.08rem;
+    }
+
+    .agreement-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: var(--space-xl);
+    }
+    .option-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: var(--shadow);
+      border-top: 4px solid var(--gold);
+      text-align: center;
+    }
+    .option-card h3 {
+      color: var(--red);
+      margin-bottom: 0.75rem;
+      font-size: 1.3rem;
+    }
+    .option-card p {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      margin-bottom: 1.5rem;
+    }
+    .option-card .btn { width: 100%; max-width: 260px; }
+
+    /* Form styles */
+    .form-section {
+      background: var(--white);
+      padding: var(--space-xl) 0;
+    }
+    .form-wrapper {
+      max-width: 720px;
+      margin: 0 auto;
+      background: var(--cream);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      border: 1px solid var(--gold-light);
+      box-shadow: var(--shadow);
+    }
+    .form-wrapper h2 {
+      color: var(--red);
+      text-align: center;
+      margin-bottom: 0.5rem;
+      font-size: 1.7rem;
+    }
+    .form-wrapper .form-note {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.92rem;
+      color: var(--charcoal);
+      margin-bottom: 0.35rem;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 0.7rem 0.9rem;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      border: 1px solid #D0C8B8;
+      border-radius: 4px;
+      background: var(--white);
+      color: var(--text);
+      transition: border-color 0.2s;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(201,162,39,0.15);
+    }
+    .form-group textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+    .form-actions {
+      text-align: center;
+      margin-top: 1.75rem;
+    }
+    .form-actions .btn {
+      min-width: 220px;
+    }
+    .form-disclaimer {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-align: center;
+      margin-top: 1.25rem;
+      line-height: 1.5;
+    }
+
+    .process-steps {
+      padding: var(--space-lg) 0 var(--space-xl);
+    }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+      counter-reset: step;
+    }
+    .step-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      box-shadow: var(--shadow);
+      text-align: center;
+      position: relative;
+    }
+    .step-card::before {
+      counter-increment: step;
+      content: counter(step);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: var(--red);
+      color: var(--white);
+      font-weight: 700;
+      font-size: 1rem;
+      border-radius: 50%;
+      margin: 0 auto 1rem;
+    }
+    .step-card h3 {
+      color: var(--red);
+      font-size: 1.15rem;
+      margin-bottom: 0.5rem;
+    }
+    .step-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin: 0;
+    }
+
+    @media (max-width: 800px) {
+      .agreement-options { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .steps-grid { grid-template-columns: 1fr; }
+      .form-wrapper { padding: 1.75rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Santa <span>GRAMPS</span></a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="book.html" class="active">Book</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="videos.html">Videos</a>
+        <a href="contact.html">Contact</a>
+        <a href="book.html" class="btn btn-primary">Book Santa GRAMPS</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Book Santa GRAMPS</h1>
+      <p>A simple, clear process so both sides know exactly what to expect.</p>
+    </div>
+  </section>
+
+  <!-- INTRO + OPTIONS -->
+  <section class="book-intro">
+    <div class="container">
+      <p>
+        Whether you’re planning a private family gathering, a community event, or a special experience, 
+        the process begins with a straightforward engagement agreement. You can download a printable PDF 
+        or complete the fillable form online.
+      </p>
+
+      <div class="agreement-options">
+        <div class="option-card">
+          <h3>Download the Agreement</h3>
+          <p>Print, complete by hand, and return a signed copy. Ideal if you prefer paper or need to share with others for review.</p>
+          <a href="pdf/Santa_GRAMPS_Engagement_Agreement.pdf" class="btn btn-primary" download>
+            Download PDF
+          </a>
+        </div>
+        <div class="option-card">
+          <h3>Complete Online</h3>
+          <p>Fill out the form below. Your information comes directly to Santa GRAMPS so we can begin the conversation.</p>
+          <a href="#inquiry-form" class="btn btn-gold">Go to Form</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS STEPS -->
+  <section class="process-steps">
+    <div class="container">
+      <div class="section-title">
+        <h2>How Booking Works</h2>
+        <p>Clear steps. No surprises.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <h3>Share the Details</h3>
+          <p>Tell us about your event — date, location, approximate number of children, and any special notes.</p>
+        </div>
+        <div class="step-card">
+          <h3>Confirm Together</h3>
+          <p>We’ll review the details, answer questions, and make sure the appearance is a good fit for everyone.</p>
+        </div>
+        <div class="step-card">
+          <h3>Finalize the Agreement</h3>
+          <p>Both sides sign the simple engagement agreement. Then we look forward to the celebration.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FILLABLE FORM -->
+  <section class="form-section" id="inquiry-form">
+    <div class="container">
+      <div class="form-wrapper">
+        <h2>Appearance Inquiry</h2>
+        <p class="form-note">
+          Complete the form below. This begins the conversation — it is not a final contract.
+        </p>
+
+        <form action="mailto:drb@santagramps.com" method="POST" enctype="text/plain">
+          <!-- Client Information -->
+          <div class="form-group">
+            <label for="client_name">Your Full Name *</label>
+            <input type="text" id="client_name" name="Client Name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="organization">Organization (if any)</label>
+            <input type="text" id="organization" name="Organization">
+          </div>
+
+          <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" id="address" name="Address">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone *</label>
+              <input type="tel" id="phone" name="Phone" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="Email" required>
+            </div>
+          </div>
+
+          <!-- Event Details -->
+          <div class="form-group" style="margin-top: 1.75rem;">
+            <label for="event">Event / Occasion *</label>
+            <input type="text" id="event" name="Event / Occasion" required placeholder="e.g., Family Christmas gathering, Community event, Corporate party">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="date">Date *</label>
+              <input type="date" id="date" name="Date" required>
+            </div>
+            <div class="form-group">
+              <label for="time">Time (start – end)</label>
+              <input type="text" id="time" name="Time" placeholder="e.g., 2:00 PM – 4:00 PM">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="location">Location / Address *</label>
+            <input type="text" id="location" name="Location" required>
+          </div>
+
+          <div class="form-group">
+            <label for="children">Approximate number of children expected</label>
+            <input type="text" id="children" name="Number of Children" placeholder="e.g., 15–25">
+          </div>
+
+          <div class="form-group">
+            <label for="notes">Special instructions or notes</label>
+            <textarea id="notes" name="Special Notes" placeholder="Anything Santa GRAMPS should know in advance..."></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Send Inquiry</button>
+          </div>
+
+          <p class="form-disclaimer">
+            Submitting this form sends your information to drb@santagramps.com. 
+            You will also receive a copy of the formal Engagement Agreement PDF for review and signature.
+            This inquiry is not a binding contract.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band">
+    <div class="container">
+      <h2>Questions Before You Book?</h2>
+      <p>Feel free to reach out directly. I’m happy to talk through the details.</p>
+      <a href="mailto:drb@santagramps.com" class="btn btn-primary">drb@santagramps.com</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Santa <span>GRAMPS</span></div>
+          <p style="font-size:0.95rem; max-width:280px;">
+            Bringing classic Christmas warmth and genuine presence to celebrations.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="about.html">About Santa GRAMPS</a>
+          <a href="book.html">Book an Appearance</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="videos.html">Videos</a>
+          <a href="https://shop-url-here.fourthwall.com" target="_blank" rel="noopener">Shop</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="mailto:drb@santagramps.com">drb@santagramps.com</a>
+          <a href="contact.html">Contact Form</a>
+          <a href="https://danbarton.me" target="_blank" rel="noopener">danbarton.me</a>
+          <a href="https://gramps.me" target="_blank" rel="noopener">GRAMPS.me</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Santa GRAMPS &nbsp;|&nbsp; A part of . . . And Satan Laughed!, LLC
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

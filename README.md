@@ -1,0 +1,69 @@
+# santagramps.com
+
+The booking site for **Santa GRAMPS** — Dan Barton in the red suit. Built from
+the template Dan sent on Oct 30, 2026 (`SantaGRAMPS_Website_Flat.zip`), with his
+photos and the North Pole Experience poster dropped in.
+
+Plain HTML + one hand-written stylesheet. No build step, no Tailwind — edit the
+files and upload them.
+
+## Pages
+
+| File           | Page                                                          |
+| -------------- | ------------------------------------------------------------- |
+| `index.html`   | Home — hero, why Santa GRAMPS, photo, this season, CTA        |
+| `about.html`   | The man behind the suit, credentials, approach                |
+| `book.html`    | Booking steps, agreement PDF download, inquiry form           |
+| `gallery.html` | Photos                                                        |
+| `videos.html`  | Videos                                                        |
+| `contact.html` | Contact details and message form                              |
+
+## Design system
+
+Shared styles and tokens are in `css/styles.css` (`:root`): red `#8B1A1A`, gold
+`#C9A227`, cream background, Playfair Display + Source Sans 3 from Google Fonts.
+Each inner page also carries its own `<style>` block in the `<head>`, as Dan's
+template shipped it. Additions for real media are under the `PHOTOS & VIDEO`
+heading in `styles.css`: add `has-photo` to a placeholder box (`about-image`,
+`bio-photo`, `gallery-item`) or `has-video` to a `video-placeholder` when it
+gets a real photo or clip.
+
+GRAMPS is always written in all caps — Dan's rule.
+
+## Media
+
+| File                                | What                                         |
+| ----------------------------------- | -------------------------------------------- |
+| `images/santa-1…4.(webp/jpg)`       | Santa suit photos Dan sent Oct 19 (burst of 4) |
+| `images/north-pole-experience.*`    | The North Pole Experience poster (home page) |
+| `media/santa-hello.mp4`             | 1.6 s clip from Oct 19, plays muted on loop  |
+| `images/santa-hello-poster.jpg`     | First frame of that clip                     |
+| `pdf/Santa_GRAMPS_Engagement_Agreement.pdf` | The locked agreement from Dan's template |
+
+The originals (HEIC/MOV) are in `../_incoming/`. New gallery photos: add a
+`<div class="gallery-item">` with a `<picture>` like the existing ones.
+
+## Forms
+
+Both forms use `action="mailto:drb@santagramps.com"` as Dan designed them, which
+opens the visitor's email app rather than submitting in the page. That only
+works once **drb@santagramps.com** exists as a mailbox — set it up (or forward
+it to DRB@danbarton.me) before launch. For in-page submissions, point the
+`action` at a form service such as Formspree instead.
+
+## Shop link
+
+The footer's **Shop** link is a placeholder: `https://shop-url-here.fourthwall.com`.
+Swap in Dan's Fourthwall shop URL across every site at once from the `Dan/`
+folder:
+
+```bash
+grep -rl shop-url-here.fourthwall.com --include='*.html' . | xargs sed -i '' 's#https://shop-url-here.fourthwall.com#https://REAL-SHOP-URL#g'
+```
+
+## Hosting
+
+Static, intended for **GitHub Pages** like the rest of the network, with the
+`CNAME` file → `santagramps.com`. The domain is registered at NameSilo; point its
+DNS at GitHub Pages (or put it behind Cloudflare like the others) once the repo
+is published.

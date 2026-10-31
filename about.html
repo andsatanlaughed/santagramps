@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Santa GRAMPS | The Man Behind the Suit</title>
+  <meta name="description" content="Meet Santa GRAMPS — a retired pastor, chaplain, and grandfather who brings genuine warmth and presence to every Christmas appearance.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8E%85%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Page-specific additions */
+    .page-hero {
+      background: linear-gradient(160deg, var(--cream) 0%, var(--cream-dark) 100%);
+      padding: 3.5rem 0 3rem;
+      text-align: center;
+      border-bottom: 1px solid var(--gold-light);
+    }
+    .page-hero h1 {
+      color: var(--red);
+      margin-bottom: 0.75rem;
+    }
+    .page-hero p {
+      color: var(--text-muted);
+      font-size: 1.15rem;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+    .bio-section {
+      padding: var(--space-xl) 0;
+    }
+    .bio-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 3.5rem;
+      align-items: start;
+    }
+    .bio-photo {
+      background: linear-gradient(145deg, var(--cream-dark), #EDE4D4);
+      border-radius: var(--radius);
+      aspect-ratio: 3/4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid var(--gold-light);
+      color: var(--text-muted);
+      font-style: italic;
+      text-align: center;
+      padding: 2rem;
+      position: sticky;
+      top: 100px;
+    }
+    .bio-content h2 {
+      color: var(--red);
+      margin-bottom: 1.25rem;
+      font-size: 1.9rem;
+    }
+    .bio-content p {
+      margin-bottom: 1.15rem;
+      color: var(--text);
+    }
+    .credentials {
+      background: var(--white);
+      border-left: 4px solid var(--gold);
+      padding: 1.5rem 1.75rem;
+      margin: 2rem 0;
+      box-shadow: var(--shadow);
+    }
+    .credentials h3 {
+      color: var(--red);
+      font-size: 1.1rem;
+      margin-bottom: 0.85rem;
+      font-family: var(--font-body);
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+    .credentials ul {
+      list-style: none;
+      padding: 0;
+    }
+    .credentials li {
+      padding: 0.35rem 0;
+      padding-left: 1.4rem;
+      position: relative;
+      color: var(--text);
+      font-size: 0.98rem;
+    }
+    .credentials li::before {
+      content: "◆";
+      color: var(--gold);
+      position: absolute;
+      left: 0;
+      font-size: 0.7rem;
+      top: 0.55rem;
+    }
+    .approach {
+      background: var(--white);
+      padding: var(--space-xl) 0;
+    }
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+    }
+    .approach-card {
+      background: var(--cream);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      border-top: 3px solid var(--red);
+      text-align: center;
+    }
+    .approach-card h3 {
+      color: var(--red);
+      margin-bottom: 0.6rem;
+      font-size: 1.2rem;
+    }
+    .approach-card p {
+      color: var(--text-muted);
+      font-size: 0.97rem;
+      margin: 0;
+    }
+    @media (max-width: 800px) {
+      .bio-grid { grid-template-columns: 1fr; }
+      .bio-photo { position: static; aspect-ratio: 4/3; max-height: 320px; }
+      .approach-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Santa <span>GRAMPS</span></a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="book.html">Book</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="videos.html">Videos</a>
+        <a href="contact.html">Contact</a>
+        <a href="book.html" class="btn btn-primary">Book Santa GRAMPS</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>About Santa GRAMPS</h1>
+      <p>The man behind the suit — and why families and organizers trust him.</p>
+    </div>
+  </section>
+
+  <!-- BIO -->
+  <section class="bio-section">
+    <div class="container bio-grid">
+      <div class="bio-photo has-photo">
+        <picture>
+          <source srcset="images/santa-2.webp" type="image/webp">
+          <img src="images/santa-2.jpg" alt="Dan Barton as Santa GRAMPS — red suit, real white beard, holding a bell and a gold sack beside a Christmas tree" loading="eager">
+        </picture>
+      </div>
+      <div class="bio-content">
+        <h2>A Lifetime of Presence</h2>
+        <p>
+          Santa GRAMPS is the Christmas presence of Dan Barton — known to his grandchildren as GRAMPS and to many others as a trusted pastor, chaplain, and friend.
+        </p>
+        <p>
+          For more than three decades he served as a pastor. He has also walked the halls of hospitals and sat at the bedsides of those nearing the end of life as a hospital and hospice chaplain. Before ministry, he worked on the factory floor. That combination of hard work, deep listening, and steady care shapes the way he shows up as Santa.
+        </p>
+        <p>
+          Children sense when an adult is fully present with them. Parents notice when someone treats their child with real respect. Organizers appreciate clear communication and a calm, professional approach. Those are the qualities Santa GRAMPS brings to every appearance.
+        </p>
+
+        <div class="credentials">
+          <h3>Background &amp; Credentials</h3>
+          <ul>
+            <li>Retired pastor — 35 years of ministry</li>
+            <li>Hospital chaplain &amp; hospice chaplain</li>
+            <li>Doctorate in pastoral counseling</li>
+            <li>Author of <em>God’s Got Your Back</em> and <em>God Repurposes Skeletons</em></li>
+            <li>Background check completed through the Jackson County Sheriff’s Department specifically for working with children in the role of Santa GRAMPS</li>
+            <li>Lives near Atlanta, Georgia</li>
+          </ul>
+        </div>
+
+        <p>
+          The red suit is the same one children have always loved. What makes the experience different is the man wearing it — someone who has spent a lifetime learning how to be fully present with people of every age.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPROACH -->
+  <section class="approach">
+    <div class="container">
+      <div class="section-title">
+        <h2>How Santa GRAMPS Approaches Every Appearance</h2>
+        <p>Simple. Steady. Child-centered.</p>
+      </div>
+      <div class="approach-grid">
+        <div class="approach-card">
+          <h3>Warm &amp; Unhurried</h3>
+          <p>No rushed lines or forced performances. Every child gets a moment that feels real.</p>
+        </div>
+        <div class="approach-card">
+          <h3>Respectful of Families</h3>
+          <p>Sensitive to different family situations, beliefs, and the wide range of what children hope for from Santa.</p>
+        </div>
+        <div class="approach-card">
+          <h3>Clear &amp; Professional</h3>
+          <p>Straightforward communication, a simple written agreement, and reliable follow-through so organizers can relax.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band">
+    <div class="container">
+      <h2>Ready to Invite Santa GRAMPS?</h2>
+      <p>Let’s talk about your event and see whether Santa GRAMPS is the right fit.</p>
+      <a href="book.html" class="btn btn-primary">Book an Appearance</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Santa <span>GRAMPS</span></div>
+          <p style="font-size:0.95rem; max-width:280px;">
+            Bringing classic Christmas warmth and genuine presence to celebrations.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="about.html">About Santa GRAMPS</a>
+          <a href="book.html">Book an Appearance</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="videos.html">Videos</a>
+          <a href="https://shop-url-here.fourthwall.com" target="_blank" rel="noopener">Shop</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="mailto:drb@santagramps.com">drb@santagramps.com</a>
+          <a href="contact.html">Contact Form</a>
+          <a href="https://danbarton.me" target="_blank" rel="noopener">danbarton.me</a>
+          <a href="https://gramps.me" target="_blank" rel="noopener">GRAMPS.me</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Santa GRAMPS &nbsp;|&nbsp; A part of . . . And Satan Laughed!, LLC
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
