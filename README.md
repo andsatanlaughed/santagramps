@@ -107,3 +107,8 @@ Static, intended for **GitHub Pages** like the rest of the network, with the
 `CNAME` file → `santagramps.com`. The domain is registered at NameSilo; point its
 DNS at GitHub Pages (or put it behind Cloudflare like the others) once the repo
 is published.
+
+Cloudflare tells browsers to keep `css/` and `js/` files for 4 hours, while
+pages are fetched fresh. So every page links them as `styles.css?v=…` and
+`main.js?v=…`: after changing either file, bump the `?v=` date on all six pages,
+or visitors get the new HTML with the old CSS.
