@@ -11,7 +11,7 @@ files and upload them.
 
 | File           | Page                                                          |
 | -------------- | ------------------------------------------------------------- |
-| `index.html`   | Home — hero, why Santa GRAMPS, photo, this season, CTA        |
+| `index.html`   | Home — hero, this season (events), why Santa GRAMPS, photo, CTA |
 | `about.html`   | The man behind the suit, credentials, approach                |
 | `book.html`    | Booking steps, agreement PDF download, inquiry form           |
 | `gallery.html` | Photos                                                        |
@@ -57,12 +57,30 @@ keeps its text brand.
 | ----------------------------------- | -------------------------------------------- |
 | `images/santa-1…4.(webp/jpg)`       | Santa suit photos Dan sent Oct 19 (burst of 4) |
 | `images/north-pole-experience.*`    | The North Pole Experience poster (home page) |
+| `images/bearfoot-ranch-santa-sessions.*` | Bearfoot Ranch Santa Mini Photo Sessions flyer, Nov 8, 2026 (Dan, Nov 3) |
 | `media/santa-hello.mp4`             | 1.6 s clip from Oct 19, plays muted on loop  |
 | `images/santa-hello-poster.jpg`     | First frame of that clip                     |
 | `pdf/Santa_GRAMPS_Engagement_Agreement.pdf` | The locked agreement from Dan's template |
 
 The originals (HEIC/MOV) are in `../_incoming/`. New gallery photos: add a
 `<div class="gallery-item">` with a `<picture>` like the existing ones.
+
+## Events
+
+The home page's **Find Santa GRAMPS This Season** section lists appearances,
+soonest first. An event with a `data-ends` date (ISO, with the time zone) is
+handled by `js/main.js`:
+
+- Until then, the red bar above the header on every page (`.event-bar`, same
+  `data-ends`) promotes it and links to the event on the home page.
+- Afterwards the bar hides, the event shows its `data-when="past"` copy instead
+  of the `data-when="upcoming"` copy (booking details and link), and it moves
+  below the upcoming events — it stays on the site as a past appearance.
+
+Bearfoot Ranch (Sun Nov 8, 2026, 1:00–5:30 PM, booking through Ryan Davis
+Photography) is the first one. The Santa in its flyer isn't Dan; if
+Ryan sends photos or a brochure of Santa GRAMPS afterwards, swap them in for
+`images/bearfoot-ranch-santa-sessions.*`.
 
 ## Forms
 

@@ -20,8 +20,48 @@
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
   <meta name="theme-color" content="#8B1A1A">
   <link rel="stylesheet" href="css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Santa Mini Photo Sessions at Bearfoot Ranch",
+    "description": "20-minute holiday photo sessions (15 images) with Santa GRAMPS and a Bearfoot Ranch horse, photographed by Ryan Davis Photography.",
+    "startDate": "2026-11-08T13:00:00-05:00",
+    "endDate": "2026-11-08T17:30:00-05:00",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "image": "https://santagramps.com/images/bearfoot-ranch-santa-sessions.jpg",
+    "location": {
+      "@type": "Place",
+      "name": "Bearfoot Ranch",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "12976 Cumming Hwy",
+        "addressLocality": "Canton",
+        "addressRegion": "GA",
+        "postalCode": "30115",
+        "addressCountry": "US"
+      }
+    },
+    "performer": { "@type": "Person", "name": "Santa GRAMPS", "url": "https://santagramps.com/" },
+    "organizer": { "@type": "Organization", "name": "Bearfoot Ranch", "url": "https://bearfootranch.org" },
+    "offers": {
+      "@type": "Offer",
+      "price": "200",
+      "priceCurrency": "USD",
+      "url": "https://ryandavisphotography.hbportal.co/public/6ab071def3bb0f539a860da8"
+    }
+  }
+  </script>
 </head>
 <body>
+
+  <!-- EVENT BAR — hidden in the HTML; main.js shows it until data-ends. -->
+  <div class="event-bar" data-ends="2026-11-08T17:30:00-05:00" hidden>
+    <div class="container">
+      <a href="index.html#bearfoot-ranch"><strong>Sunday, Nov 8:</strong> Santa Mini Photo Sessions with Santa GRAMPS at Bearfoot Ranch <span>Reserve a session&nbsp;&rarr;</span></a>
+    </div>
+  </div>
 
   <!-- HEADER -->
   <header class="site-header">
@@ -84,6 +124,81 @@
     </div>
   </div>
 
+  <!-- THIS SEASON — appearances, soonest first. Once an event's data-ends has
+       passed, main.js shows its "past" copy and moves it below the others, so it
+       stays on the site as somewhere Santa GRAMPS appeared. -->
+  <section class="section" id="this-season">
+    <div class="container">
+      <div class="section-title">
+        <h2>Find Santa GRAMPS This Season</h2>
+        <p>Come say hello — here’s where Santa GRAMPS will be this Christmas.</p>
+      </div>
+
+      <div class="season-list">
+        <article class="season-grid season-event" id="bearfoot-ranch" data-ends="2026-11-08T17:30:00-05:00">
+          <a class="season-poster" href="https://ryandavisphotography.hbportal.co/public/6ab071def3bb0f539a860da8" target="_blank" rel="noopener" data-booking>
+            <picture>
+              <source srcset="images/bearfoot-ranch-santa-sessions.webp" type="image/webp">
+              <img src="images/bearfoot-ranch-santa-sessions.jpg" alt="Bearfoot Ranch flyer for Santa Mini Photo Sessions: a family posed with Santa and a horse. 20 minutes, 15 images, $200, with Santa and your favorite Bearfoot Ranch horse. Sunday, November 8, 1:00 to 5:30 PM. Last year sold out — pre-book now with Ryan Davis Photography." width="794" height="1123" loading="lazy">
+            </picture>
+          </a>
+          <div class="season-text">
+            <p class="season-eyebrow" data-when="upcoming">Sunday, November 8 &bull; Canton, Georgia</p>
+            <p class="season-eyebrow" data-when="past" hidden>Past Appearance &bull; November 8, 2026</p>
+            <h3>Santa Mini Photo Sessions at Bearfoot Ranch</h3>
+            <p data-when="upcoming">
+              Santa GRAMPS is the Santa for Bearfoot Ranch’s holiday mini sessions — twenty unhurried
+              minutes with Santa and your favorite Bearfoot Ranch horse, photographed by Ryan Davis Photography.
+            </p>
+            <p data-when="past" hidden>
+              Santa GRAMPS was the Santa for Bearfoot Ranch’s holiday mini sessions in Canton, Georgia —
+              twenty minutes with Santa and a Bearfoot Ranch horse, photographed by Ryan Davis Photography,
+              with part of every session fee going to the horses at the ranch.
+            </p>
+            <dl class="event-details" data-when="upcoming">
+              <dt>When</dt>
+              <dd>Sunday, November 8 &bull; 1:00–5:30 PM</dd>
+              <dt>Where</dt>
+              <dd><a href="https://www.google.com/maps/search/?api=1&query=Bearfoot+Ranch+12976+Cumming+Hwy+Canton+GA+30115" target="_blank" rel="noopener">Bearfoot Ranch, 12976 Cumming Hwy, Canton, GA 30115</a></dd>
+              <dt>Session</dt>
+              <dd>20 minutes &bull; 15 images &bull; $200</dd>
+              <dt>Booking</dt>
+              <dd>Through Ryan Davis Photography. A portion of every session fee supports the horses at Bearfoot Ranch.</dd>
+            </dl>
+            <p class="event-note" data-when="upcoming">Last year sold out — spots are still open, so pre-book now.</p>
+            <div class="season-actions">
+              <a href="https://ryandavisphotography.hbportal.co/public/6ab071def3bb0f539a860da8" target="_blank" rel="noopener" class="btn btn-primary" data-when="upcoming" data-booking>Reserve a Session</a>
+              <a href="book.html" class="btn btn-outline" data-when="past" hidden>Book Santa GRAMPS for Your Own Event</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="season-grid season-event" id="north-pole-experience">
+          <div class="season-poster">
+            <picture>
+              <source srcset="images/north-pole-experience.webp" type="image/webp">
+              <img src="images/north-pole-experience.jpg" alt="Poster for The North Pole Experience in downtown Jefferson — a magical train ride, winter wonderland scenery, a visit with Santa Claus, Santa's workshop, and hot cocoa. Get your tickets today." loading="lazy">
+            </picture>
+          </div>
+          <div class="season-text">
+            <p class="season-eyebrow">Downtown Jefferson, Georgia</p>
+            <h3>The North Pole Experience</h3>
+            <p>
+              This Christmas, Santa GRAMPS is the Santa waiting at The North Pole Experience in downtown Jefferson —
+              a magical train ride through a winter wonderland, Santa's workshop, hot cocoa, and a visit with Santa himself.
+            </p>
+            <p>
+              Tickets are sold by The North Pole Experience. Scan the code on the poster to get yours.
+            </p>
+            <div class="season-actions">
+              <a href="book.html" class="btn btn-outline">Book Santa GRAMPS for Your Own Event</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- WHY SANTA GRAMPS -->
   <section class="section">
     <div class="container">
@@ -126,30 +241,6 @@
           <source srcset="images/santa-1.webp" type="image/webp">
           <img src="images/santa-1.jpg" alt="Dan Barton as Santa GRAMPS — red suit, real white beard, holding a bell and a gold sack beside a Christmas tree" loading="lazy">
         </picture>
-      </div>
-    </div>
-  </section>
-
-  <!-- THIS SEASON -->
-  <section class="section">
-    <div class="container season-grid">
-      <div class="season-poster">
-        <picture>
-          <source srcset="images/north-pole-experience.webp" type="image/webp">
-          <img src="images/north-pole-experience.jpg" alt="Poster for The North Pole Experience in downtown Jefferson — a magical train ride, winter wonderland scenery, a visit with Santa Claus, Santa's workshop, and hot cocoa. Get your tickets today." loading="lazy">
-        </picture>
-      </div>
-      <div class="season-text">
-        <p class="season-eyebrow">Find Santa GRAMPS This Season</p>
-        <h2>The North Pole Experience</h2>
-        <p>
-          This Christmas, Santa GRAMPS is the Santa waiting at The North Pole Experience in downtown Jefferson —
-          a magical train ride through a winter wonderland, Santa's workshop, hot cocoa, and a visit with Santa himself.
-        </p>
-        <p>
-          Tickets are sold by The North Pole Experience. Scan the code on the poster to get yours.
-        </p>
-        <a href="book.html" class="btn btn-outline mt-1">Book Santa GRAMPS for Your Own Event</a>
       </div>
     </div>
   </section>
