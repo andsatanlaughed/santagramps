@@ -30,6 +30,27 @@ gets a real photo or clip.
 
 GRAMPS is always written in all caps — Dan's rule.
 
+## Logo & favicon
+
+Dan sent the Santa GRAMPS logo on Nov 1, 2026 (`images/santagramps-logo-original.jpg`,
+1920×1280 on white).
+
+| File                                  | Used for                                      |
+| ------------------------------------- | --------------------------------------------- |
+| `images/santagramps-logo.(webp/png)`  | Home page hero — full logo, transparent background |
+| `images/santagramps-wordmark.(webp/png)` | Header on every page — "Santa / GRAMPS" only, no ornaments |
+| `favicon.ico`                         | 16/32/48 — browsers ask for `/favicon.ico` by default |
+| `images/favicon-32.png`, `favicon-16.png` | Browser tab                               |
+| `images/apple-touch-icon.png`         | 180 — iOS home screen                         |
+| `images/icon-512.png`                 | Source / any future manifest                  |
+
+The favicon is the script **S** from Dan's logo in cream on Santa red
+(`#8B1A1A`), in the same rounded-square family as the GRAMPS and
+GodRepurposesSkeletons icons — the gold inner ring appears on the 180/512
+sizes; 16/32 drop it and use a heavier, larger S so it stays legible.
+The logo's black "GRAMPS" disappears on dark backgrounds, so the black footer
+keeps its text brand.
+
 ## Media
 
 | File                                | What                                         |
@@ -53,12 +74,13 @@ it to DRB@danbarton.me) before launch. For in-page submissions, point the
 
 ## Shop link
 
-The footer's **Shop** link is a placeholder: `https://shop-url-here.fourthwall.com`.
+The **Shop** link (last item in the menu, and in the footer) is a placeholder:
+`https://shop-url-here.fourthwall.com`.
 Swap in Dan's Fourthwall shop URL across every site at once from the `Dan/`
 folder:
 
 ```bash
-grep -rl shop-url-here.fourthwall.com --include='*.html' . | xargs sed -i '' 's#https://shop-url-here.fourthwall.com#https://REAL-SHOP-URL#g'
+grep -rl shop-url-here.fourthwall.com --include='*.html' --include='*.yml' --exclude-dir=node_modules . | xargs sed -i '' 's#https://shop-url-here.fourthwall.com#https://REAL-SHOP-URL#g'
 ```
 
 ## Hosting
