@@ -55,7 +55,7 @@ keeps its text brand.
 
 | File                                | What                                         |
 | ----------------------------------- | -------------------------------------------- |
-| `images/santa-1…4.(webp/jpg)`       | Santa suit photos Dan sent Oct 19 (burst of 4) |
+| `images/santa-1…4.(webp/jpg)`       | Santa suit photos Dan sent Oct 19 (burst of 4). Off the pages since Nov 9 (the Gallery's "In the Suit" group was dropped — every photo is in the suit); `santa-1.jpg` is still the home page's link-preview image |
 | `images/north-pole-experience.*`    | The North Pole Experience poster (home page) |
 | `images/bearfoot-ranch-*.(webp/jpg)` | 10 photos from the Bearfoot Ranch mini sessions, Nov 8, 2026 (Dan, Nov 9), 1000×1500, metadata stripped — see below |
 | `media/santa-hello.mp4`             | 1.6 s clip from Oct 19, plays muted on loop  |
