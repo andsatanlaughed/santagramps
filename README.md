@@ -57,13 +57,38 @@ keeps its text brand.
 | ----------------------------------- | -------------------------------------------- |
 | `images/santa-1…4.(webp/jpg)`       | Santa suit photos Dan sent Oct 19 (burst of 4) |
 | `images/north-pole-experience.*`    | The North Pole Experience poster (home page) |
-| `images/bearfoot-ranch-santa-sessions.*` | Bearfoot Ranch Santa Mini Photo Sessions flyer, Nov 8, 2026 (Dan, Nov 3) |
+| `images/bearfoot-ranch-*.(webp/jpg)` | 10 photos from the Bearfoot Ranch mini sessions, Nov 8, 2026 (Dan, Nov 9), 1000×1500, metadata stripped — see below |
 | `media/santa-hello.mp4`             | 1.6 s clip from Oct 19, plays muted on loop  |
 | `images/santa-hello-poster.jpg`     | First frame of that clip                     |
 | `pdf/Santa_GRAMPS_Engagement_Agreement.pdf` | The locked agreement from Dan's template |
 
 The originals (HEIC/MOV) are in `../_incoming/`. New gallery photos: add a
-`<div class="gallery-item">` with a `<picture>` like the existing ones.
+`<div class="gallery-item has-photo">` with a `<picture>` like the existing ones,
+inside a `.gallery-group` (each group has its own heading and `id`).
+
+### Bearfoot Ranch photos (Nov 8, 2026)
+
+Dan texted these 10 on Nov 9 — "shots that could be put on santagramps.com",
+leaving where and how many to us. Full-size originals (Canon, 4640×6960) are in
+`../_incoming/2026-11-09-dan-photos/`. All 10 are in the Gallery's
+**Bearfoot Ranch** group (`gallery.html#bearfoot-ranch`); three also appear
+elsewhere:
+
+| File (`images/…`)                    | Original     | Also used on                               |
+| ------------------------------------ | ------------ | ------------------------------------------ |
+| `bearfoot-ranch-santa-baby`          | IMG_2377     |                                            |
+| `bearfoot-ranch-family-horse`        | IMG_2378     |                                            |
+| `bearfoot-ranch-family-baby`         | IMG_2379     |                                            |
+| `bearfoot-ranch-santa-toddler`       | IMG_2380     |                                            |
+| `bearfoot-ranch-santa-mom-baby`      | IMG_2381     |                                            |
+| `bearfoot-ranch-family-girl`         | IMG_2382     |                                            |
+| `bearfoot-ranch-santa-girl`          | IMG_2383     | Home — "Meet Santa GRAMPS"                 |
+| `bearfoot-ranch-santa-horse`         | IMG_2384     | Home — the Bearfoot Ranch event (and its JSON-LD image) |
+| `bearfoot-ranch-santa-portrait`      | IMG_2385     | About — bio photo                          |
+| `bearfoot-ranch-santa-trailer`       | IMG_2386     |                                            |
+
+To regenerate one: `magick IMG_NNNN.JPG -auto-orient -resize 1000x1500 -strip
+-interlace JPEG -quality 80 out.jpg`, then `cwebp -q 78 -metadata none out.jpg -o out.webp`.
 
 ## Events
 
@@ -78,9 +103,11 @@ handled by `js/main.js`:
   below the upcoming events — it stays on the site as a past appearance.
 
 Bearfoot Ranch (Sun Nov 8, 2026, 1:00–5:30 PM, booking through Ryan Davis
-Photography) is the first one. The Santa in its flyer isn't Dan; if
-Ryan sends photos or a brochure of Santa GRAMPS afterwards, swap them in for
-`images/bearfoot-ranch-santa-sessions.*`.
+Photography) is the first one. It ran with Bearfoot's flyer until Dan sent
+photos from the day (Nov 9); the flyer, whose Santa wasn't Dan, was swapped for
+`images/bearfoot-ranch-santa-horse.*`, which links to the photos in the Gallery,
+and the past copy gained a "See Photos from the Day" button. The original flyer
+is still in `../_incoming/bearfoot-ranch-santa-sessions-flyer.jpg`.
 
 ## Forms
 

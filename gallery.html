@@ -54,6 +54,26 @@
       box-shadow: var(--shadow-lg);
       border-color: var(--gold);
     }
+    .gallery-group { scroll-margin-top: 110px; } /* clear the sticky header when linked to */
+    .gallery-group + .gallery-group { margin-top: var(--space-xl); }
+    .gallery-heading {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .gallery-heading .eyebrow {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      margin-bottom: 0.4rem;
+    }
+    .gallery-heading h2 { color: var(--red); margin-bottom: 0.5rem; }
+    .gallery-heading p:last-child {
+      color: var(--text-muted);
+      max-width: 560px;
+      margin: 0 auto;
+    }
     .gallery-note {
       text-align: center;
       margin-top: 2.5rem;
@@ -105,28 +125,104 @@
 
   <section class="gallery-section">
     <div class="container">
-      <div class="gallery-grid">
-        <div class="gallery-item has-photo">
-          <picture>
-            <source srcset="images/santa-1.webp" type="image/webp">
-            <img src="images/santa-1.jpg" alt="Dan Barton as Santa GRAMPS — red suit, real white beard, holding a bell and a gold sack beside a Christmas tree" loading="lazy">
-          </picture>
+      <!-- Photos Dan sent Nov 9 from the Nov 8 mini sessions (originals in ../_incoming/2026-11-09-dan-photos/). -->
+      <div class="gallery-group" id="bearfoot-ranch">
+        <div class="gallery-heading">
+          <p class="eyebrow">November 8, 2026 &bull; Canton, Georgia</p>
+          <h2>Santa Mini Photo Sessions at Bearfoot Ranch</h2>
+          <p>An autumn afternoon of families, little ones, and a Bearfoot Ranch horse or two, all in front of the ranch’s red holiday trailer.</p>
         </div>
-        <div class="gallery-item has-photo">
-          <picture>
-            <source srcset="images/santa-3.webp" type="image/webp">
-            <img src="images/santa-3.jpg" alt="Dan Barton as Santa GRAMPS — red suit, real white beard, holding a bell and a gold sack beside a Christmas tree" loading="lazy">
-          </picture>
+        <div class="gallery-grid">
+          <div class="gallery-item has-photo">
+            <picture>
+              <source srcset="images/bearfoot-ranch-santa-portrait.webp" type="image/webp">
+              <img src="images/bearfoot-ranch-santa-portrait.jpg" alt="Santa GRAMPS smiling on a fur-draped bench in front of the red horse trailer" width="1000" height="1500" loading="lazy">
+            </picture>
+          </div>
+          <div class="gallery-item has-photo">
+            <picture>
+              <source srcset="images/bearfoot-ranch-santa-horse.webp" type="image/webp">
+              <img src="images/bearfoot-ranch-santa-horse.jpg" alt="Santa GRAMPS holding the reins of a bay horse with a young rider in the saddle" width="1000" height="1500" loading="lazy">
+            </picture>
+          </div>
+          <div class="gallery-item has-photo">
+            <picture>
+              <source srcset="images/bearfoot-ranch-santa-girl.webp" type="image/webp">
+              <img src="images/bearfoot-ranch-santa-girl.jpg" alt="Santa GRAMPS listening to a young girl in plaid pants seated beside him" width="1000" height="1500" loading="lazy">
+            </picture>
+          </div>
+          <div class="gallery-item has-photo">
+            <picture>
+              <source srcset="images/bearfoot-ranch-family-horse.webp" type="image/webp">
+              <img src="images/bearfoot-ranch-family-horse.jpg" alt="A family with Santa GRAMPS as a palomino horse leans in to greet their daughter" width="1000" height="1500" loading="lazy">
+            </picture>
+          </div>
+          <div class="gallery-item has-photo">
+            <picture>
+              <source srcset="images/bearfoot-ranch-santa-toddler.webp" type="image/webp">
+              <img src="images/bearfoot-ranch-santa-toddler.jpg" alt="A toddler in a red velvet dress sitting on Santa GRAMPS’s lap" width="1000" height="1500" loading="lazy">
+            </picture>
+          </div>
+          <div class="gallery-item has-photo">
+            <picture>
+              <source srcset="images/bearfoot-ranch-family-baby.webp" type="image/webp">
+              <img src="images/bearfoot-ranch-family-baby.jpg" alt="A family of four with their baby, gathered around Santa GRAMPS in front of the red trailer" width="1000" height="1500" loading="lazy">
+            </picture>
+          </div>
+          <div class="gallery-item has-photo">
+            <picture>
+              <source srcset="images/bearfoot-ranch-santa-baby.webp" type="image/webp">
+              <img src="images/bearfoot-ranch-santa-baby.jpg" alt="Santa GRAMPS cradling a baby in a white knit outfit" width="1000" height="1500" loading="lazy">
+            </picture>
+          </div>
+          <div class="gallery-item has-photo">
+            <picture>
+              <source srcset="images/bearfoot-ranch-santa-mom-baby.webp" type="image/webp">
+              <img src="images/bearfoot-ranch-santa-mom-baby.jpg" alt="A mother and her baby seated beside Santa GRAMPS on the fur-draped bench" width="1000" height="1500" loading="lazy">
+            </picture>
+          </div>
+          <div class="gallery-item has-photo">
+            <picture>
+              <source srcset="images/bearfoot-ranch-family-girl.webp" type="image/webp">
+              <img src="images/bearfoot-ranch-family-girl.jpg" alt="Parents standing behind Santa GRAMPS and their daughter in front of the red trailer" width="1000" height="1500" loading="lazy">
+            </picture>
+          </div>
+          <div class="gallery-item has-photo">
+            <picture>
+              <source srcset="images/bearfoot-ranch-santa-trailer.webp" type="image/webp">
+              <img src="images/bearfoot-ranch-santa-trailer.jpg" alt="Santa GRAMPS relaxing on the bench beside the wreath-hung red horse trailer, autumn woods behind" width="1000" height="1500" loading="lazy">
+            </picture>
+          </div>
         </div>
-        <div class="gallery-item has-photo">
-          <picture>
-            <source srcset="images/santa-4.webp" type="image/webp">
-            <img src="images/santa-4.jpg" alt="Dan Barton as Santa GRAMPS — red suit, real white beard, holding a bell and a gold sack beside a Christmas tree" loading="lazy">
-          </picture>
+      </div>
+
+      <div class="gallery-group" id="in-the-suit">
+        <div class="gallery-heading">
+          <h2>In the Suit</h2>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item has-photo">
+            <picture>
+              <source srcset="images/santa-1.webp" type="image/webp">
+              <img src="images/santa-1.jpg" alt="Dan Barton as Santa GRAMPS — red suit, real white beard, holding a bell and a gold sack beside a Christmas tree" loading="lazy">
+            </picture>
+          </div>
+          <div class="gallery-item has-photo">
+            <picture>
+              <source srcset="images/santa-3.webp" type="image/webp">
+              <img src="images/santa-3.jpg" alt="Dan Barton as Santa GRAMPS — red suit, real white beard, holding a bell and a gold sack beside a Christmas tree" loading="lazy">
+            </picture>
+          </div>
+          <div class="gallery-item has-photo">
+            <picture>
+              <source srcset="images/santa-4.webp" type="image/webp">
+              <img src="images/santa-4.jpg" alt="Dan Barton as Santa GRAMPS — red suit, real white beard, holding a bell and a gold sack beside a Christmas tree" loading="lazy">
+            </picture>
+          </div>
         </div>
       </div>
       <p class="gallery-note">
-        Photos from appearances will be added here as they become available. 
+        More photos will be added here as the season goes on.
         Check back soon for moments captured with Santa GRAMPS.
       </p>
     </div>
